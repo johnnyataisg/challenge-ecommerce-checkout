@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ecommerce Checkout Challenge
+## Introduction
+A local Boba Tea shop is trying to expand their business online. You have been tasked to help them develop an ecommerce site so that customers can shop online!
 
-## Getting Started
+Here is an explanation of what I will build as the deliverable for part B:
 
-First, run the development server:
+## Description
+A simple web application including the following views/components:
+  - A landing page
+  - A shopping cart
+  - A receipt/confirmation page
+  
+## Features
+1. The main page will show all products available at the shop. This includes the price, name, description, and a picture. The user can click on a button/icon in each card to add it to their cart.
+2. The user can at any point, click on the cart icon on the top right corner of the page to open up the cart modal. This modal will show all items the user clicked on, their prices, quantity, and a subtotal and total (minus tax). Cart content should be persisted and should not reset upon refresh of the page.
+3. The user can click on the "Checkout" button in the cart modal which adds an order to the database, clears the cart, and brings them to a receipt summary page.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+For the deliverable of part B, I will build all of these features along with the database, APIs, and basic UI components. Not all of these will be required to be built by the candidate during the interview. For part C, I will pick certain important parts of part B to omit and leave to the candidate to implement. These will most likely by API calls, certain API definitions, HTML to display data, and would exclude CSS and styling. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The dependencies for this project should be relatively simple:
+1. Next.js
+2. TypeScript
+3. Prisma
+4. Material UI
+5. Lint tools
+6. Fetch
+7. Local SQLite database
