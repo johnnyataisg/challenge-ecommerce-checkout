@@ -1,12 +1,10 @@
-import { ShoppingCart } from "@mui/icons-material";
+import { ShoppingCart as ShoppingCartIcon } from "@mui/icons-material";
 import { Box, AppBar, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { ReactElement } from "react";
-import Cart from "./Cart";
 
+// Write code in this component to trigger showing the shopping cart
 const NavBar: React.FC = (): ReactElement => {
-  const [showCart, setShowCart] = React.useState(false)
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -15,8 +13,7 @@ const NavBar: React.FC = (): ReactElement => {
             Bobalicious
           </Typography>
           <p color="inherit" style={{ marginRight: "10px" }}>Welcome back, Tom!</p>
-          <ShoppingCart style={{ cursor: "pointer" }} onClick={() => setShowCart(!showCart)} />
-          {showCart && <Cart />}
+          <ShoppingCartIcon style={{ cursor: "pointer" }} />
         </Toolbar>
       </AppBar>
     </Box>

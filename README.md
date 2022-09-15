@@ -8,8 +8,7 @@ A local Boba Tea shop is trying to expand their business online. You have been t
 This only needs to happen once.
 Run `npm run dev` to start the app. Each time you boot the app with this command, a script will be run to reset the local database with product data. This is to save you time so you don't need to add product listings yourself.
 
-Your task is to help us complete this ecommerce app by writing code for core logic, APIs, and React components. A lot of UI code (CSS, reusable components) has been done for you so that
-you can focus on the important stuff. Static assets such as images, and database infra is already there, so be careful not to touch it. Try your best to write clean and readable code and adhere to best practices. Good luck!
+Your task is to help us complete this ecommerce app by writing code for core logic, APIs, and React components. Your UI does not have to look exactly like the examples. Functionality is more important, but try not to make it ugly either. Try your best to write clean and readable code and adhere to best practices. Good luck!
 
 ## Requirements
 ### 1. Display products in home page
@@ -19,13 +18,13 @@ should also be a button in each product listing that adds the item to the shoppi
 ![home](homepage_screenshot.png?raw=true)
 
 ### 2. Modify and view the shopping cart
-As stated above, clicking on the button in each product listing should add 1 of that item to the cart. The customer can click as many times as they want to add more and more. On the top right corner of the page there is a shopping cart icon. Clicking on this icon should show the cart modal, which contains all the items and their quantities, as well as a subtotal, tax, and total price. The shopping cart is tied to the `ShoppingCart` table in the database. There should be a `Checkout` button on the bottom.
+On the top right corner of the page there is a shopping cart icon. Clicking on this icon should show the cart modal, which contains all the items and their quantities, as well as a subtotal, tax, and total price. The customer can add and remove items as they please. The shopping cart is tied to the `ShoppingCart` table in the database. There should be a `Checkout` button on the bottom. The tax rate should be 7%.
 
 ![sc1](sc_1.gif?raw=true)
 
 ### 3. Checkout and view receipt
 When the customer clicks on the checkout button, an order should be persisted into the databse `Order` table, and the cart should be cleared. The customer is then taken to a receipt page:
-`http://localhost:3000/order/{orderId}` where they can view their receipt.
+`http://localhost:3000/checkout/{orderId}` where they can view their receipt.
 
 ![sc2](sc_2.gif?raw=true)
 
