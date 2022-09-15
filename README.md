@@ -3,9 +3,10 @@
 A local Boba Tea shop is trying to expand their business online. You have been tasked to help them develop an ecommerce site so that customers can shop online!
 
 ## Getting Started
-If you just cloned the repo, make sure to run `npm install` and `npm run migrate`. This only needs to happen once.
-Run `npm run dev` to start the app. Each time you boot the app with this command, a script will be run to reset and populate the local database with product data. This is just there to
-save you time so you don't need to add product listings yourself.
+1. `npm install`
+2. `npm run migrate`
+This only needs to happen once.
+Run `npm run dev` to start the app. Each time you boot the app with this command, a script will be run to reset the local database with product data. This is to save you time so you don't need to add product listings yourself.
 
 Your task is to help us complete this ecommerce app by writing code for core logic, APIs, and React components. A lot of UI code (CSS, reusable components) has been done for you so that
 you can focus on the important stuff. Static assets such as images, and database infra is already there, so be careful not to touch it. Try your best to write clean and readable code and adhere to best practices. Good luck!
@@ -47,4 +48,4 @@ Clears the shopping cart.
 Gets the order from the database.
 
 `POST /api/order`
-Adds an order to the database. This endpoint accepts a JSON body and saves that JSON body as a string to the `summary` column in the `Order` table. 
+Adds an order to the database. This endpoint accepts a JSON body and saves that JSON body in stringified form to the `summary` column in the `Order` table. 
