@@ -28,7 +28,7 @@ const Cart: React.FC = (): ReactElement => {
   const subtotal: number = React.useMemo(() => {
     let subTotal = 0
     cartItems.forEach(item => {
-      subTotal += item.product.price * item.quantity
+      subTotal += parseFloat((item.product.price * item.quantity).toFixed(2))
     })
     return subTotal
   }, [cartItems])
@@ -37,8 +37,8 @@ const Cart: React.FC = (): ReactElement => {
     return parseFloat((subtotal * TAX_RATE).toFixed(2))
   }, [subtotal])
 
-  const total: string = React.useMemo(() => {
-    return (subtotal - tax).toFixed(2)
+  const total: number = React.useMemo(() => {
+    return parseFloat((subtotal + tax).toFixed(2))
   }, [subtotal, tax])
 
   const checkout = async (): Promise<void> => {
@@ -80,9 +80,9 @@ const Cart: React.FC = (): ReactElement => {
           </div>
         ))}
       </Stack>
-      <h4>Subtotal: ${subtotal}</h4>
-      <h4>Tax: ${tax}</h4>
-      <h4>Total: ${total}</h4>
+      <h4>Subtotal: ${subtotal.toFixed(2)}</h4>
+      <h4>Tax: ${tax.toFixed(2)}</h4>
+      <h4>Total: ${total.toFixed(2)}</h4>
       <Button variant="contained" style={{ marginTop: "25px" }} onClick={() => checkout()}>Checkout</Button>
     </Card>
   )
