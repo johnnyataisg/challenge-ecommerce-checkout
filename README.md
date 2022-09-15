@@ -25,3 +25,7 @@ The dependencies for this project should be relatively simple:
 5. Lint tools
 6. Fetch
 7. Local SQLite database
+
+## Startin the app
+If you just cloned the repo, make sure to run `npm install` and `npm run migrate`. This only needs to happen once.
+Do `npm run dev` to start the app.
