@@ -16,6 +16,8 @@ you can focus on the important stuff. Static assets such as images, and database
 The `Product` table has 4 items stored. Display all these items when the customer lands at the website. You need to display the product photos, name, description, and price. There 
 should also be a button in each product listing that adds the item to the shopping cart. Product photos are located in the `public` folder.
 
+![home](homepage_screenshot.png?raw=true)
+
 ### 2. Modify and view the shopping cart
 As stated above, clicking on the button in each product listing should add 1 of that item to the cart. The customer can click as many times as they want to add more and more. On the top right corner of the page there is a shopping cart icon. Clicking on this icon should show the cart modal, which contains all the items and their quantities, as well as a subtotal, tax, and total price. The shopping cart is tied to the `ShoppingCart` table in the database. There should be a `Checkout` button on the bottom.
 
