@@ -21,9 +21,13 @@ should also be a button in each product listing that adds the item to the shoppi
 ### 2. Modify and view the shopping cart
 As stated above, clicking on the button in each product listing should add 1 of that item to the cart. The customer can click as many times as they want to add more and more. On the top right corner of the page there is a shopping cart icon. Clicking on this icon should show the cart modal, which contains all the items and their quantities, as well as a subtotal, tax, and total price. The shopping cart is tied to the `ShoppingCart` table in the database. There should be a `Checkout` button on the bottom.
 
+![sc1](sc_1.gif?raw=true)
+
 ### 3. Checkout and view receipt
 When the customer clicks on the checkout button, an order should be persisted into the databse `Order` table, and the cart should be cleared. The customer is then taken to a receipt page:
 `http://localhost:3000/order/{orderId}` where they can view their receipt.
+
+![sc2](sc_2.gif?raw=true)
 
 ## APIs
 You will need to work with Next.js APIs to complete this project. All API code should be written in the `/pages/api` folder. You can choose which client library to use to make REST calls.
