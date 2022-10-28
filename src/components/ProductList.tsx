@@ -10,7 +10,6 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products }: ProductListProps): ReactElement => {
   const addToCart = async (product: Product): Promise<void> => {
-    console.log(product)
     await fetch(`http://localhost:3000/api/cart/add?&product=${product.id}`, { method: "POST" })
   }
 
